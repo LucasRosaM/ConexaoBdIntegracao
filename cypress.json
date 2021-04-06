@@ -1,0 +1,13 @@
+{
+  "projectId": "TamplateCypress-BU_QA",
+  "video": false,
+  "viewportWidth": 1520,
+  "viewportHeight": 880,
+  "chromeWebSecurity": false,
+  "numTestsKeptInMemory": 1,
+  "ignoreTestFiles": "*.js",
+  "testFiles": "**/*.{feature,features}",
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "./reports",
+  "trashAssetsBeforeRuns": true
+}
