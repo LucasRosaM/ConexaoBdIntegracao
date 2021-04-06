@@ -1,7 +1,7 @@
 {
   "name": "api-test",
   "version": "1.0.0",
-  "description": "Template to apply the new WEG project by Compasso UOL",
+  "description": "Template",
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
@@ -18,6 +18,7 @@
     "fs-extra": "^8.1.0",
     "jsonschema": "^1.4.0",
     "multiple-cucumber-html-reporter": "^1.18.0",
+    "oracledb": "^5.1.0",
     "rimraf": "^3.0.2"
   },
   "cypress-cucumber-preprocessor": {
@@ -31,7 +32,7 @@
     }
   },
   "devDependencies": {
-    "cypress": "^5.6.0",
+    "cypress": "^7.0.0",
     "cypress-cucumber-preprocessor": "^2.5.5"
   },
   "author": "Leonardo Kartabil",
