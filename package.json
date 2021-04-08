@@ -4,6 +4,8 @@
   "description": "Template",
   "main": "index.js",
   "scripts": {
+    "cypress:db" : "node ./cypress/requests/connection.service.js && cypress open",
+    "connect:db" : "node ./cypress/requests/connection.service.js", 
     "cypress:open": "cypress open",
     "cucumber": "cypress-tags run -e",
     "test": "cypress run --spec \"**/*.feature\"",
@@ -14,8 +16,9 @@
   "dependencies": {
     "cypress-plugin-tab": "^1.0.5",
     "cypress-xpath": "^1.4.0",
-    "fs": "^0.0.1-security",
+    "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
+    "gcc": "^1.0.2",
     "jsonschema": "^1.4.0",
     "multiple-cucumber-html-reporter": "^1.18.0",
     "oracledb": "^5.1.0",
@@ -33,6 +36,7 @@
   },
   "devDependencies": {
     "cypress": "^7.0.0",
+    "cypress-config-switcher": "^1.0.0",
     "cypress-cucumber-preprocessor": "^2.5.5"
   },
   "author": "Leonardo Kartabil",

@@ -1,11 +1,10 @@
 const oracledb = require('oracledb');
-const dbConfig = require('./BD.service');
+const dbConfig = require('../plugins/BD.service');
+var fs = require('fs');
 
-export class Connection{
+class Connection{
        
     async run(){
-        
-        
         let connect, result, values = [];
         try {
             connect = await oracledb.getConnection(dbConfig);
@@ -33,11 +32,24 @@ export class Connection{
             const select = `SELECT * FROM portfolioCodePolos`
                 
             result = await connect.execute(select);
+            console.log(result)
             for(let i = 0; i < result.rows.length;i++){
                 values.push(result.rows[i][0])
+
             }
-           
-            return values
+
+            
+            var file = fs.createWriteStream('./cypress/requests/code.txt');
+            file.on('error', function(err) {
+              console.error(err);
+            });
+            values.forEach(function(v) {
+               file.write(v); 
+
+            });
+
+            let a = fs.readFileSync('./cypress/requests/code.txt' , 'utf-8')
+            console.log(a)
 
         } catch (err) {
             console.error(err);
@@ -59,5 +71,7 @@ export class Connection{
 
 }
 
-// let test = new Connection();
-// test.run()
+
+let test = new Connection();
+test.run()
+

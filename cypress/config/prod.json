@@ -1,5 +1,4 @@
 {
-  "baseUrl": "https://www.weg.net/institutional/BR/pt/",
   "env": {
     "global_timeout": 60000,
     "environment": "PRD"
