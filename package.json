@@ -10,7 +10,7 @@
     "test": "cypress run --spec \"**/*.feature\"",
     "cypress:run": "cypress run",
     "precypress:run": "node ./cypress/support/clear.js"
-    },
+  },
   "dependencies": {
     "cypress-plugin-tab": "^1.0.5",
     "cypress-xpath": "^1.4.0",
@@ -23,6 +23,9 @@
     "cypress": "^7.0.0",
     "cypress-config-switcher": "^1.0.0"
   },
-  "contributors": ["Leonardo Kartabil", "Lucas Melo"],
+  "contributors": [
+    "Leonardo Kartabil",
+    "Lucas Melo"
+  ],
   "license": "ISC"
 }

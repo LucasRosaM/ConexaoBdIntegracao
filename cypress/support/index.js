@@ -3,7 +3,6 @@
 import './commands'
 import 'cypress-plugin-tab'
 import 'cypress-xpath'
-import 'jsonschema'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
